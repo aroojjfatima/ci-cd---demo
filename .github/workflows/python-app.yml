@@ -21,13 +21,13 @@ jobs:
     - name: Run Linter
       run: |
         pip install pylint
-        pylint hello.py || true  # Ensures the build doesn't fail due to linter warnings
+        pylint main.py || true  # Ensures the build doesn't fail due to linter warnings
 
     - name: Run Script
       run: python hello.py
 
     - name: Create artefact zip
-      run: zip artefact.zip hello.py
+      run: zip artefact.zip main.py
 
     - name: Upload artefact
       uses: actions/upload-artifact@v2
