@@ -24,7 +24,7 @@ jobs:
         pylint main.py || true  # Ensures the build doesn't fail due to linter warnings
 
     - name: Run Script
-      run: python hello.py
+      run: python main.py
 
     - name: Create artefact zip
       run: zip artefact.zip main.py
